@@ -8,7 +8,7 @@ const { validationResult } = require('express-validator')
 //     fs.mkdirSync(folderPath)
 // }
 
-const file = './tmp/quotes.json'
+const file = 'tmp/quotes.json'
 if (!fs.existsSync(file)) {
     fs.writeFileSync(file, '[]', 'utf-8')
 }
