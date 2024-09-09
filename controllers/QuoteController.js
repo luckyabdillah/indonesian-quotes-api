@@ -4,7 +4,7 @@ const getRandom = require("../helpers/getRandom")
 const { validationResult } = require('express-validator')
 // const badwords = require("indonesian-badwords")
 
-const dir = 'tmp'
+const dir = '/tmp'
 const file = path.join(dir, 'quotes.json')
 
 if (!fs.existsSync(dir)) {
