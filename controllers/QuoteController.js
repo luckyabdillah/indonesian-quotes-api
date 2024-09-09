@@ -3,10 +3,10 @@ const getRandom = require("../helpers/getRandom")
 const { validationResult } = require('express-validator')
 // const badwords = require("indonesian-badwords")
 
-const folderPath = './tmp'
-if (!fs.existsSync(folderPath)) {
-    fs.mkdirSync(folderPath)
-}
+// const folderPath = './tmp'
+// if (!fs.existsSync(folderPath)) {
+//     fs.mkdirSync(folderPath)
+// }
 
 const file = './tmp/quotes.json'
 if (!fs.existsSync(file)) {
