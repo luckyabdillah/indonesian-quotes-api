@@ -4,11 +4,12 @@ const getRandom = require("../helpers/getRandom")
 const { validationResult } = require('express-validator')
 // const badwords = require("indonesian-badwords")
 
-const data = path.join('tmp/' + 'quotes.json')
+const dir = path.join(process.cwd(), 'tmp')
+const data = path.join(dir, 'quotes.json')
 
-// if (!fs.existsSync(dir)) {
-//     fs.mkdir(__dirname + '/tmp', { recursive: true }, err => {})
-// }
+if (!fs.existsSync(dir)) {
+    fs.mkdirSync(dir, { recursive: true })
+}
 
 if (!fs.existsSync(data)) {
     fs.writeFileSync(data, '[]', 'utf-8')
@@ -16,7 +17,6 @@ if (!fs.existsSync(data)) {
 
 const loadQuotes = () => {
     const file = fs.readFileSync(data, 'utf-8')
-    // console.log(file);
     const quotes = JSON.parse(file)
     return quotes
 }
