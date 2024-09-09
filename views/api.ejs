@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Indonesian Quotes API</title>
+    <link rel="stylesheet" href="/css/main.css"/>
+    <link rel="stylesheet" href="/css/style.css"/>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <meta name="description" content="Indonesian Quotes API | Collection of Indonesian quotes">
+    <link rel="shortcut icon" href="/img/indonesia.png" type="image/x-icon">
+</head>
+<body>
+    <div class="container lg:px-32 md:px-10 px-4 mx-auto">
+        <nav class="navbar bg-base-100">
+            <div class="flex-1">
+                <a href="/" class="lg:text-2xl text-xl font-semibold ms-0">QuotesAPI <small class="text-sm md:inline-block block text-center font-normal">indonesia</small></a>
+            </div>
+            <div class="md:block hidden">
+                <ul class="menu menu-horizontal">
+                    <li class="md:px-3 inline-block text-base"><a href="/about">About</a></li>
+                    <li class="md:px-3 inline-block text-base"><a href="/guide">Guide</a></li>
+                    <li class="md:px-3 inline-block text-base"><a href="/api">API</a></li>
+                </ul>
+            </div>
+            <div class="md:hidden block">
+                <ul class="menu menu-horizontal rounded-box">
+                    <li>
+                        <a class="tooltip tooltip-bottom" data-tip="About" href="/about">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 28 28" stroke-width="1.5" stroke="currentColor" class="size-6">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M9.879 7.519c1.171-1.025 3.071-1.025 4.242 0 1.172 1.025 1.172 2.687 0 3.712-.203.179-.43.326-.67.442-.745.361-1.45.999-1.45 1.827v.75M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Zm-9 5.25h.008v.008H12v-.008Z" />
+                            </svg>
+                        </a>
+                    </li>
+                    <li>
+                        <a class="tooltip tooltip-bottom" data-tip="Guide" href="/guide">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 28 28" stroke-width="1.5" stroke="currentColor" class="size-6">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M12 6.042A8.967 8.967 0 0 0 6 3.75c-1.052 0-2.062.18-3 .512v14.25A8.987 8.987 0 0 1 6 18c2.305 0 4.408.867 6 2.292m0-14.25a8.966 8.966 0 0 1 6-2.292c1.052 0 2.062.18 3 .512v14.25A8.987 8.987 0 0 0 18 18a8.967 8.967 0 0 0-6 2.292m0-14.25v14.25" />
+                            </svg>
+                        </a>
+                    </li>
+                    <li>
+                        <a class="tooltip tooltip-bottom" data-tip="API" href="/api">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 28 28" stroke-width="1.5" stroke="currentColor" class="size-6">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M17.25 6.75 22.5 12l-5.25 5.25m-10.5 0L1.5 12l5.25-5.25m7.5-3-4.5 16.5" />
+                            </svg>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+        <div class="ps-2 md:text-lg mb-8 me-4">
+            <div class="mb-10">
+                <h1 class="mt-10 mb-3 text-3xl font-semibold">Get all quotes</h1>
+                <p class="md:leading-7 leading-6 mb-3">Since this project is open-source, the data <span class="font-bold">may</span> be large. I'm not suggesting you to get all the data, but by the way.. I've ever heard someone say: "No risk, no story", do you believe that? 😏</p>
+                <div class="mockup-code">
+                    <pre><code>GET https://indonesian-quotes-api.vercel.app/api/quotes</code></pre>
+                </div>
+            </div>
+            <div class="mb-10">
+                <h1 class="mb-3 text-3xl font-semibold">Get all quotes with specific category</h1>
+                <p class="md:leading-7 leading-6 mb-3">You might want to get all quotes with specific category.</p>
+                <div class="mockup-code">
+                    <pre><code>GET https://indonesian-quotes-api.vercel.app/api/quotes?category=[category]</code></pre>
+                </div>
+            </div>
+            <div class="mb-10">
+                <h1 class="mb-3 text-3xl font-semibold">Get all categories</h1>
+                <p class="md:leading-7 leading-6 mb-3">If you're confused with the categories, you can display all of them.</p>
+                <div class="mockup-code">
+                    <pre><code>GET https://indonesian-quotes-api.vercel.app/api/categories</code></pre>
+                </div>
+            </div>
+            <div class="mb-10">
+                <h1 class="mb-3 text-3xl font-semibold">Get quotes by ID</h1>
+                <p class="md:leading-7 leading-6 mb-3">You'll get consistent quote for every call with the same ID.</p>
+                <div class="mockup-code">
+                    <pre><code>GET https://indonesian-quotes-api.vercel.app/api/quotes/{id}</code></pre>
+                </div>
+            </div>
+            <div class="mb-10">
+                <h1 class="mb-3 text-3xl font-semibold">Get random quotes</h1>
+                <p class="md:leading-7 leading-6 mb-3">You'll get different result for every call.</p>
+                <div class="mockup-code">
+                    <pre><code>GET https://indonesian-quotes-api.vercel.app/api/quotes/random</code></pre>
+                </div>
+            </div>
+            <div class="mb-10">
+                <h1 class="mb-3 text-3xl font-semibold">Get random quotes with specific category</h1>
+                <p class="md:leading-7 leading-6 mb-3">You'll get different result for every call with the specific category.</p>
+                <div class="mockup-code">
+                    <pre><code>GET https://indonesian-quotes-api.vercel.app/api/quotes/random?category=[category]</code></pre>
+                </div>
+            </div>
+        </div>
+        <footer class="footer footer-center text-base-content rounded p-10">
+            <div>
+                <p class="pb-0">Made with love.</p>
+                <p class="pb-0">Contribute to this project on <a href="https://github.com/luckyabdillah/indonesian-quotes-api" class="text-blue-600 link-hover">GitHub</a>.</p>
+            </div>
+        </footer>
+    </div>
+</body>
+</html>

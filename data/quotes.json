@@ -1,0 +1,331 @@
+[
+  {
+    "id": 1,
+    "quote": "Harapan adalah mimpi dari seorang yang terjaga.",
+    "source": "Aristoteles",
+    "description": "Filsuf dari Yunani",
+    "category": "life"
+  },
+  {
+    "id": 2,
+    "quote": "Lokasi lahir boleh di mana saja, tapi lokasi mimpi harus di langit.",
+    "source": "Anies Baswedan",
+    "description": "Akademisi dan politikus dari Indonesia",
+    "category": "dream"
+  },
+  {
+    "id": 3,
+    "quote": "Tidak ada mimpi yang terlalu tinggi untuk dicapai, yang ada hanya niat yang terlalu rendah untuk melangkah.",
+    "source": "Bong Chandra",
+    "description": "Pebisnis, pembicara dan motivator dari Indonesia",
+    "category": "dream"
+  },
+  {
+    "id": 5,
+    "quote": "Sesuatu yang hebat dan besar selalu susah diraih. Itu sebabnya, saya mampu menahan derita karena ambisi mewujudkan mimpi yang lebih besar lagi.",
+    "source": "Agnes Monica",
+    "description": "Penyanyi pop Indonesia",
+    "category": "ambition"
+  },
+  {
+    "id": 6,
+    "quote": "Mimpi adalah jawaban hari ini atas pertanyaan-pertanyaan esok.",
+    "source": "Edgar Cayce",
+    "description": "Psikis dan waskita dari Amerika Serikat",
+    "category": "dream"
+  },
+  {
+    "id": 7,
+    "quote": "Pupuklah mimpi dan harapan beserta doa dan ikhtiar.",
+    "source": "Deassy M. Destiani",
+    "description": "Penulis asal Indonesia",
+    "category": "inspiration"
+  },
+  {
+    "id": 8,
+    "quote": "Harapan adalah mimpi yang nyata.",
+    "source": "Aristoteles",
+    "description": "Filsuf dari Yunani",
+    "category": "life"
+  },
+  {
+    "id": 9,
+    "quote": "Mimpi menjadi kenyataan adalah hasil dari tindakan Anda dan tindakan Anda sebagian besar dikendalikan oleh kebiasaan Anda.",
+    "source": "John C. Maxwell",
+    "description": "Penulis dan penbicara dari Amerika Serikat",
+    "category": "habit"
+  },
+  {
+    "id": 4,
+    "quote": "Percayalah, sepanjang kita punya mimpi, punya rencana, walaupun kecil tapi masuk akal, tidak boleh sekalipun rasa sedih, rasa tak berguna itu datang mengganggu pikiran.",
+    "source": "Tere Liye",
+    "description": "Penulis dari Indonesia",
+    "category": "life"
+  },
+  {
+    "id": 10,
+    "quote": "Bermimpilah yang tinggi, tapi jangan berusaha menggapai mimpi tersebut. Melainkan berusahalah melampauinya.",
+    "source": "Anies Baswedan",
+    "description": "Akademisi dan politikus dari Indonesia",
+    "category": "dream"
+  },
+  {
+    "id": 11,
+    "quote": "Visi tanpa eksekusi adalah lamunan. Eksekusi tanpa visi adalah mimpi buruk.",
+    "source": "Bunda Teresa",
+    "description": "Biarawati Katolik Roma",
+    "category": "vision"
+  },
+  {
+    "id": 12,
+    "quote": "Kamu tidak pernah terlalu tua untuk menentukan tujuan lain atau memimpikan mimpi yang baru.",
+    "source": "C. S. Lewis",
+    "description": "Penulis dari Britania-Raya",
+    "category": "life"
+  },
+  {
+    "id": 13,
+    "quote": "Hidup tak usah diratapi karena ujian adalah kemestian. Berusaha saja. Berjuang menaklukkan berbagai halangan yang memberi jarak mimpi-mimpi dan dirimu.",
+    "source": "Asma Nadia",
+    "description": "Penulis dari Indonesia",
+    "category": "life"
+  },
+  {
+    "id": 14,
+    "quote": "Kita memiliki mesin waktu sendiri-sendiri. Sebagian membawa kita ke masa lalu yang disebut memori. Sebagian lain membawa kita ke masa depan yang disebut mimpi.",
+    "source": "Jeremy Irons",
+    "description": "Aktor dari Inggris",
+    "category": "dream"
+  },
+  {
+    "id": 15,
+    "quote": "Banyak pemimpi yang awalnya ditertawakan, bahkan sampai dibilang gila tapi semua akhirnya bungkam setelah melihat mimpi-mimpinya mewujud jadi kenyataan.",
+    "source": "Rangga Umara",
+    "description": "Pengusaha dari Indonesia",
+    "category": "life"
+  },
+  {
+    "id": 16,
+    "quote": "Bermimpilah setinggi-tingginya. Yang harus dibayar adalah mewujudkan mimpi itu. Cara bayarnya dengan kerja keras, semangat, dan komitmen.",
+    "source": "Susi Pudjiastuti",
+    "description": "Menteri Kelautan dan Perikanan Indonesia (2014-2019)",
+    "category": "dream"
+  },
+  {
+    "id": 17,
+    "quote": "Anda tak boleh merasa terlalu tua untuk menetapkan tujuan lain atau merajut mimpi-mimpi baru.",
+    "source": "C. S. Lewis",
+    "description": "Penulis dari Britania-Raya",
+    "category": "dream"
+  },
+  {
+    "id": 18,
+    "quote": "Masa depan adalah milik mereka yang percaya pada keindahan mimpi-mimpi mereka.",
+    "source": "Eleanor Roosevelt",
+    "description": "\"First Lady\" dan kolumnis dari Amerika Serikat",
+    "category": "dream"
+  },
+  {
+    "id": 19,
+    "quote": "Masa lalu, rasa sakit, masa depan, mimpi-mimpi, semua akan berlalu, seperti sungai yang mengalir. Maka biarlah hidupku mengalir seperti sungai kehidupan.",
+    "source": "Tere Liye",
+    "description": "Penulis dari Indonesia",
+    "category": "life"
+  },
+  {
+    "id": 20,
+    "quote": "Cinta selalu saja misterius. Jangan diburu-buru, atau kau akan merusak jalan ceritanya sendiri.",
+    "source": "Tere Liye",
+    "description": "Penulis dari Indonesia",
+    "category": "love"
+  },
+  {
+    "id": 21,
+    "quote": "Daun yang jatuh tak pernah membenci angin. Dia membiarkan dirinya jatuh begitu saja. Tak melawan, Mengikhlaskan semua.",
+    "source": "Tere Liye",
+    "description": "Penulis dari Indonesia",
+    "category": "life"
+  },
+  {
+    "id": 22,
+    "quote": "Bersabar dan diam lebih baik. Jika memang jodoh akan terbuka sendiri jalan terbaiknya. Jika tidak, akan diganti dengan orang yang lebih baik.",
+    "source": "Tere Liye",
+    "description": "Penulis dari Indonesia",
+    "category": "love"
+  },
+  {
+    "id": 23,
+    "quote": "Ketahuilah bahwa kemenangan bersama kesabaran, kelapangan bersama kesempitan, dan kesulitan bersama kemudahan.",
+    "source": "HR. Tirmidzi",
+    "description": "Ahli Hadits",
+    "category": "life"
+  },
+  {
+    "id": 24,
+    "quote": "Jangan melibatkan hatimu dalam kesedihan atas masa lalu atau kamu tidak akan siap untuk apa yang akan datang.",
+    "source": "Ali bin Abi Thalib",
+    "description": "Khalifah",
+    "category": "wisdom"
+  },
+  {
+    "id": 25,
+    "quote": "Barang siapa yang tidak mensyukuri yang sedikit, maka ia tidak akan mampu mensyukuri sesuatu yang banyak.",
+    "source": "HR. Ahmad",
+    "description": "Ahli Hadits",
+    "category": "wisdom"
+  },
+  {
+    "id": 26,
+    "quote": "Allah tidak membebani seseorang melainkan sesuai dengan kesanggupannya.",
+    "source": "Q.S Al-Baqarah: 286",
+    "description": "Al-Quran",
+    "category": "islam"
+  },
+  {
+    "id": 27,
+    "quote": "Bangunlah pagi hari untuk mencari rezeki dan kebutuhan-kebutuhanmu. Sesungguhnya pada pagi hari terdapat barakah dan keberuntungan.",
+    "source": "HR. At-Thabrani dan Al-Bazzar",
+    "description": "Ahli Hadits",
+    "category": "wisdom"
+  },
+  {
+    "id": 28,
+    "quote": "Sesungguhnya jika kamu bersyukur, pasti Kami akan menambah (nikmat) kepadamu, namun jika kamu mengingkari (nikmat-Ku), maka sesungguhnya azab-Ku sangatlah pedih.",
+    "source": "QS. Ibrahim: 7",
+    "description": "Al-Quran",
+    "category": "islam"
+  },
+  {
+    "id": 29,
+    "quote": "Kerjakanlah urusan duniamu seakan-akan kamu hidup selamanya. Dan laksanakanlah urusan akhiratmu seakan-akan kamu akan mati besok.",
+    "source": "HR. Ibnu Asakir",
+    "description": "Ahli Hadits",
+    "category": "wisdom"
+  },
+  {
+    "id": 30,
+    "quote": "Tidak beriman seseorang di antara kalian hingga ia mencintai Saudaranya sebagaimana mencintai dirinya sendiri.",
+    "source": "HR. Bukhari dan Muslim",
+    "description": "Ahli Hadits",
+    "category": "wisdom"
+  },
+  {
+    "id": 31,
+    "quote": "Ketahuilah bahwa kemenangan bersama kesabaran, kelapangan bersama kesempitan, dan kesulitan bersama kemudahan.",
+    "source": "HR. Tirmidzi",
+    "description": "Ahli Hadits",
+    "category": "wisdom"
+  },
+  {
+    "id": 32,
+    "quote": "Dunia ini ibarat bayangan. Kalau kau berusaha menangkapnya, ia akan lari. Tapi kalau kau membelakanginya, ia tak punya pilihan selain mengikutimu.",
+    "source": "Ibnu Qayyim Al Jauziyyah",
+    "description": "Cendekiawan dan Ahli Fikih",
+    "category": "wisdom"
+  },
+  {
+    "id": 33,
+    "quote": "Ciri dari kelalaian manusia ialah ketika ia seringkali mengeluh ketika menerima ujian pun jarang bersyukur ketika mendapatkan nikmat yang luar biasa.",
+    "source": "Unknown",
+    "description": null,
+    "category": "wisdom"
+  },
+  {
+    "id": 34,
+    "quote": "Bersyukur atas keterbatasan yang kamu miliki karena hal itu memberimu kesempatan untuk memperbaiki diri.",
+    "source": "Unknown",
+    "description": null,
+    "category": "wisdom"
+  },
+  {
+    "id": 35,
+    "quote": "Jangan risaukan apa yang tidak kita miliki, tapi risaukan hati saat tak bersungguh-sungguh mensyukuri setiap pemberian-Nya.",
+    "source": "Unknown",
+    "description": null,
+    "category": "wisdom"
+  },
+  {
+    "id": 36,
+    "quote": "Kesabaran itu ada dua macam: sabar atas sesuatu yang tidak kau ingin dan sabar menahan diri dari sesuatu yang kau ingini.",
+    "source": "Ali bin Abi Thalib",
+    "description": "Khalifah",
+    "category": "wisdom"
+  },
+  {
+    "id": 37,
+    "quote": "Kehidupan itu cuma dua hari. Satu hari berpihak kepadamu dan satu hari melawanmu. Maka pada saat ia berpihak kepadamu, jangan bangga dan gegabah; dan pada saat ia melawanmu bersabarlah. Karena keduanya adalah ujian bagimu.",
+    "source": "Ali bin Abi Thalib",
+    "description": "Khalifah",
+    "category": "wisdom"
+  },
+  {
+    "id": 38,
+    "quote": "Jangan tunggu kaya untuk bersedekah, sebalikanya bersedekahlah untuk membuka pintu rezeki dan harta.",
+    "source": "Unknown",
+    "description": null,
+    "category": "wisdom"
+  },
+  {
+    "id": 39,
+    "quote": "Balaslah keburukan dengan kebaikan.",
+    "source": "Unknown",
+    "description": null,
+    "category": "wisdom"
+  },
+  {
+    "id": 40,
+    "quote": "Keimanan membuat seseorang cinta dengan kematian. Kekufuran membuat seseorang takut terhadapnya.",
+    "source": "Unknown",
+    "description": null,
+    "category": "wisdom"
+  },
+  {
+    "id": 41,
+    "quote": "Janganlah engkau mengucapkan perkataan yang engkau sendiri tak suka mendengarnya jika orang lain mengucapkannya kepadamu.",
+    "source": "Ali bin Abi Thalib",
+    "description": "Khalifah",
+    "category": "wisdom"
+  },
+  {
+    "id": 42,
+    "quote": "Seorang Pria mendambakan wanita yang sempurna dan begitu juga wanita mendambakan sosok pria sempurna, namun mereka tidak tahu bahwa Tuhan telah menciptakan mereka untuk saling menyempurnakan satu sama lain.",
+    "source": "Unknown",
+    "description": null,
+    "category": "love"
+  },
+  {
+    "id": 43,
+    "quote": "Saat masalahmu jadi terlalu berat untuk dihadapi, beristirahatlah dan hitung berkah yang sudah kau dapatkan.",
+    "source": "Unknown",
+    "description": null,
+    "category": "wisdom"
+  },
+  {
+    "id": 44,
+    "quote": "Ada saatnya kamu memperjuangkan dan diperjuangkan oleh seseorang. Bersabarlah dan fokuslah untuk memantaskan dirimu. Yakinlah Tuhan akan hadirkan dan tunjukkan penyempurna hidupmu di saat yang tepat.",
+    "source": "Unknown",
+    "description": null,
+    "category": "love"
+  },
+  {
+    "id": 45,
+    "quote": "Jangan kasih kesempatan kedua bagi orang yang mendua. Paham?",
+    "source": "Kak Gem",
+    "description": null,
+    "category": "love"
+  },
+  {
+    "id": 46,
+    "quote": "Jangan mencintai orang yang tidak pernah mencintaimu, kau hanya membuang-buang waktu. Lebih baik kau mencintai orang yang mempunyai kepastian kepadamu. Paham?",
+    "source": "Kak Gem",
+    "description": null,
+    "category": "love"
+  },
+  {
+    "id": 47,
+    "quote": "Di langit yang kau tatap, ada rindu yang kutitip.",
+    "source": "Unknown",
+    "description": null,
+    "category": "love"
+  }
+]

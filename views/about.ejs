@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Indonesian Quotes API</title>
+    <link rel="stylesheet" href="/css/main.css"/>
+    <link rel="stylesheet" href="/css/style.css"/>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <meta name="description" content="Indonesian Quotes API | Collection of Indonesian quotes">
+    <link rel="shortcut icon" href="/img/indonesia.png" type="image/x-icon">
+</head>
+<body>
+    <div class="container lg:px-32 md:px-10 px-4 mx-auto">
+        <nav class="navbar bg-base-100">
+            <div class="flex-1">
+                <a href="/" class="lg:text-2xl text-xl font-semibold ms-0">QuotesAPI <small class="text-sm md:inline-block block text-center font-normal">indonesia</small></a>
+            </div>
+            <div class="md:block hidden">
+                <ul class="menu menu-horizontal">
+                    <li class="md:px-3 inline-block text-base"><a href="/about">About</a></li>
+                    <li class="md:px-3 inline-block text-base"><a href="/guide">Guide</a></li>
+                    <li class="md:px-3 inline-block text-base"><a href="/api">API</a></li>
+                </ul>
+            </div>
+            <div class="md:hidden block">
+                <ul class="menu menu-horizontal rounded-box">
+                    <li>
+                        <a class="tooltip tooltip-bottom" data-tip="About" href="/about">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 28 28" stroke-width="1.5" stroke="currentColor" class="size-6">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M9.879 7.519c1.171-1.025 3.071-1.025 4.242 0 1.172 1.025 1.172 2.687 0 3.712-.203.179-.43.326-.67.442-.745.361-1.45.999-1.45 1.827v.75M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Zm-9 5.25h.008v.008H12v-.008Z" />
+                            </svg>
+                        </a>
+                    </li>
+                    <li>
+                        <a class="tooltip tooltip-bottom" data-tip="Guide" href="/guide">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 28 28" stroke-width="1.5" stroke="currentColor" class="size-6">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M12 6.042A8.967 8.967 0 0 0 6 3.75c-1.052 0-2.062.18-3 .512v14.25A8.987 8.987 0 0 1 6 18c2.305 0 4.408.867 6 2.292m0-14.25a8.966 8.966 0 0 1 6-2.292c1.052 0 2.062.18 3 .512v14.25A8.987 8.987 0 0 0 18 18a8.967 8.967 0 0 0-6 2.292m0-14.25v14.25" />
+                            </svg>
+                        </a>
+                    </li>
+                    <li>
+                        <a class="tooltip tooltip-bottom" data-tip="API" href="/api">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 28 28" stroke-width="1.5" stroke="currentColor" class="size-6">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M17.25 6.75 22.5 12l-5.25 5.25m-10.5 0L1.5 12l5.25-5.25m7.5-3-4.5 16.5" />
+                            </svg>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+        <div class="md:text-lg ps-2 me-4">
+            <div class="mb-12">
+                <h1 class="mt-10 mb-3 text-3xl font-semibold">About this project</h1>
+                <p class="md:leading-7 leading-6 mb-5">I built my ERP project for Restaurant from July - August 2024. I want to display daily quotes in the main dashboard at that time, but I'm having trouble finding a good Indonesian Quotes API. And I also did not have enough time to build it by myself.</p>
+                <p class="md:leading-7 leading-6">I thought, why not make it by myself and make it into an API so that another people can use it too? Therefore, this was born.</p>
+            </div>
+            <div class="mb-12">
+                <h1 class="mt-8 mb-3 text-3xl font-semibold">Can I submit my quotes?</h1>
+                <p class="md:leading-7 leading-6 mb-3">For sure! Hit this endpoint with your Postman or any API Platform. Bear in mind, your quotes must not insult anyone or be racists. Let's keep the quotes healthy.</p>
+                <div class="mockup-code">
+                    <pre><code>POST https://indonesian-quotes-api.vercel.app/api/quotes</code></pre>
+                    <pre><code></code></pre>
+                    <pre><code class="text-gray-400">// fill the body with this details</code></pre>
+                    <pre><code></code>{</pre>
+                    <pre>  <code>"quote": "lorem ipsum dolor sit amet", <span class="text-gray-400">// required</span></code></pre>
+                    <pre>  <code>"source" "John Doe", <span class="text-gray-400">// required</span></code></pre>
+                    <pre>  <code>"description": "something", <span class="text-gray-400">// optional</span></code></pre>
+                    <pre>  <code>"category": "something" <span class="text-gray-400">// optional</span></code></pre>
+                    <pre><code></code>}</pre>
+                </div>
+            </div>
+            <div class="mb-12">
+                <h1 class="mt-8 mb-3 text-3xl font-semibold">I don't have any quotes, can I contribute?</h1>
+                <p class="md:leading-7 leading-6 mb-3">Of course! This project is open sourced on <a href="https://github.com/luckyabdillah/indonesian-quotes-api" target="_blank" class="text-blue-600 link-hover">GitHub</a>. Feel free to crunch a bug, add a feature, or fix a small typo.</p>
+            </div>
+            <div class="mb-12">
+                <h1 class="mt-8 mb-3 text-3xl font-semibold">I have other inquiries</h1>
+                <p class="md:leading-7 leading-6 mb-3">You can catch me up through my  <a href="mailto:luckyabdillah00@gmail.com" class="text-blue-600 link-hover">email</a>, and I'll be in touch as soon as possible.</p>
+            </div>
+        </div>
+        <footer class="footer footer-center text-base-content rounded p-10">
+            <div>
+                <p class="pb-0">Made with love.</p>
+                <p class="pb-0">Contribute to this project on <a href="https://github.com/luckyabdillah/indonesian-quotes-api" class="text-blue-600 link-hover">GitHub</a>.</p>
+            </div>
+        </footer>
+    </div>
+</body>
+</html>
