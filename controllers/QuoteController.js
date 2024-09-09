@@ -4,7 +4,7 @@ const getRandom = require("../helpers/getRandom")
 const { validationResult } = require('express-validator')
 // const badwords = require("indonesian-badwords")
 
-const data = path.join('./tmp/' + 'quotes.json')
+const data = path.join('tmp/' + 'quotes.json')
 
 // if (!fs.existsSync(dir)) {
 //     fs.mkdir(__dirname + '/tmp', { recursive: true }, err => {})
