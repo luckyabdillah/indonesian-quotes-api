@@ -4,8 +4,10 @@ const getRandom = require("../helpers/getRandom")
 const { validationResult } = require('express-validator')
 // const badwords = require("indonesian-badwords")
 
-const dir = '/tmp'
+const dir = './tmp'
 const data = path.join(dir, 'quotes.json')
+
+console.log(data);
 
 if (!fs.existsSync(dir)) {
     fs.mkdirSync(dir, { recursive: true })
@@ -17,6 +19,7 @@ if (!fs.existsSync(data)) {
 
 const loadQuotes = () => {
     const file = fs.readFileSync(data, 'utf-8')
+    console.log(file);
     const quotes = JSON.parse(file)
     return quotes
 }
