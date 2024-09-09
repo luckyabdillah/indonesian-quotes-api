@@ -5,18 +5,18 @@ const { validationResult } = require('express-validator')
 // const badwords = require("indonesian-badwords")
 
 const dir = '/tmp'
-const file = path.join(dir, 'quotes.json')
+const data = path.join(dir, 'quotes.json')
 
 if (!fs.existsSync(dir)) {
     fs.mkdirSync(dir, { recursive: true })
 }
 
-if (!fs.existsSync(file)) {
-    fs.writeFileSync(file, '[]', 'utf-8')
+if (!fs.existsSync(data)) {
+    fs.writeFileSync(data, '[]', 'utf-8')
 }
 
 const loadQuotes = () => {
-    const file = fs.readFileSync(file, 'utf-8')
+    const file = fs.readFileSync(data, 'utf-8')
     const quotes = JSON.parse(file)
     return quotes
 }
