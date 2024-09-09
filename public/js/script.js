@@ -11,7 +11,7 @@ function formatValue(value) {
 }
 
 async function main() {
-    const response = await fetch(`http://localhost:3000/api/quotes/random`)
+    const response = await fetch(`http://indoensian-quotes-api.vercell.app/api/quotes/random`)
 
     if (!response.ok) {
         console.error(response)
