@@ -4,16 +4,11 @@ const getRandom = require("../helpers/getRandom")
 const { validationResult } = require('express-validator')
 // const badwords = require("indonesian-badwords")
 
-console.log(fs.existsSync('tmp'));
+const data = path.join('./tmp/' + 'quotes.json')
 
-const dir = './tmp'
-const data = path.join(dir, 'quotes.json')
-
-// console.log(data);
-
-if (!fs.existsSync(dir)) {
-    fs.mkdirSync(dir, { recursive: true }, err => {})
-}
+// if (!fs.existsSync(dir)) {
+//     fs.mkdir(__dirname + '/tmp', { recursive: true }, err => {})
+// }
 
 if (!fs.existsSync(data)) {
     fs.writeFileSync(data, '[]', 'utf-8')
