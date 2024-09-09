@@ -3,24 +3,24 @@ const getRandom = require("../helpers/getRandom")
 const { validationResult } = require('express-validator')
 // const badwords = require("indonesian-badwords")
 
-const folderPath = './data'
+const folderPath = './tmp'
 if (!fs.existsSync(folderPath)) {
     fs.mkdirSync(folderPath)
 }
 
-const file = './data/quotes.json'
+const file = './tmp/quotes.json'
 if (!fs.existsSync(file)) {
     fs.writeFileSync(file, '[]', 'utf-8')
 }
 
 const loadQuotes = () => {
-    const file = fs.readFileSync('data/quotes.json', 'utf-8')
+    const file = fs.readFileSync('tmp/quotes.json', 'utf-8')
     const quotes = JSON.parse(file)
     return quotes
 }
 
 const saveQuotes = (quotes) => {
-    fs.writeFileSync('data/quotes.json', JSON.stringify(quotes, null, 2), 'utf-8')
+    fs.writeFileSync('tmp/quotes.json', JSON.stringify(quotes, null, 2), 'utf-8')
 }
 
 module.exports.index = (req, res) => {
