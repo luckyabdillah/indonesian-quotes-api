@@ -22,7 +22,7 @@ const loadQuotes = () => {
 }
 
 const saveQuotes = (quotes) => {
-    fs.writeFileSync(file, JSON.stringify(quotes, null, 2), 'utf-8')
+    fs.writeFileSync(data, JSON.stringify(quotes, null, 2), 'utf-8')
 }
 
 module.exports.index = (req, res) => {
