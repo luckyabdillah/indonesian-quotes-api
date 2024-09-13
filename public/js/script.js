@@ -10,8 +10,8 @@ function formatValue(value) {
     }
 }
 
-async function main() {
-    const response = await fetch(`https://indonesian-quotes-api.vercel.app/api/quotes/random`)
+async function getQuote() {
+    const response = await fetch(`/api/quotes/random`)
 
     if (!response.ok) {
         console.error(response)
@@ -19,17 +19,17 @@ async function main() {
 
     const quotes = await response.json()
 
-    const id = formatValue(quotes.data.id)
-    const quote = formatValue(quotes.data.quote)
-    const source = formatValue(quotes.data.source)
-    const description = formatValue(quotes.data.description)
-    const category = formatValue(quotes.data.category)
-
-    document.querySelector('#id').innerText = id
-    document.querySelector('#quote').innerText = quote
-    document.querySelector('#source').innerText = source
-    document.querySelector('#description').innerText = description
-    document.querySelector('#category').innerText = category
+    return quotes
 }
 
-main()
+document.addEventListener('DOMContentLoaded', async () => {
+    const quotes = await getQuote()
+
+    const {_id, quote, source, description, category} = quotes.data
+
+    document.querySelector('#id').innerText = formatValue(_id)
+    document.querySelector('#quote').innerText = formatValue(quote)
+    document.querySelector('#source').innerText = formatValue(source)
+    document.querySelector('#description').innerText = formatValue(description)
+    document.querySelector('#category').innerText = formatValue(category)
+})

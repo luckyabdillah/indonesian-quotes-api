@@ -1,32 +1,11 @@
-const fs = require('fs')
-const path = require('path')
-const getRandom = require("../helpers/getRandom")
+require('../utils/db')
+
 const { validationResult } = require('express-validator')
+const Quote = require('../model/quote')
 // const badwords = require("indonesian-badwords")
 
-const dir = path.join(process.cwd(), 'tmp')
-const data = path.join(dir, 'quotes.json')
-
-if (!fs.existsSync(dir)) {
-    fs.mkdirSync(dir, { recursive: true })
-}
-
-if (!fs.existsSync(data)) {
-    fs.writeFileSync(data, '[]', 'utf-8')
-}
-
-const loadQuotes = () => {
-    const file = fs.readFileSync(data, 'utf-8')
-    const quotes = JSON.parse(file)
-    return quotes
-}
-
-const saveQuotes = (quotes) => {
-    fs.writeFileSync(data, JSON.stringify(quotes, null, 2), 'utf-8')
-}
-
-module.exports.index = (req, res) => {
-    const quotes = loadQuotes()
+module.exports.index = async (req, res) => {
+    const quotes = await Quote.find()
 
     const category = req.query.category
     
@@ -38,7 +17,7 @@ module.exports.index = (req, res) => {
                 status: 404,
                 endpoint: req.originalUrl,
                 method: req.method,
-                data: 'Not found',
+                message: "Not found",
             })
         }
 
@@ -46,6 +25,7 @@ module.exports.index = (req, res) => {
             status: 200,
             endpoint: req.originalUrl,
             method: req.method,
+            total_quotes: filteredQuotes.length,
             data: filteredQuotes,
         })
     }
@@ -59,7 +39,7 @@ module.exports.index = (req, res) => {
     })
 }
 
-module.exports.store = (req, res) => {
+module.exports.store = async (req, res) => {
     const errors = validationResult(req)
     if (!errors.isEmpty()) {
         return res.status(400).json({
@@ -92,41 +72,54 @@ module.exports.store = (req, res) => {
     //     }
     // }
 
-    const quotes = loadQuotes()
-    const lastId = quotes.length > 0 ? Math.max(...quotes.map(q => q.id)) : 0
+    try {
+        const newQuote = await Quote.create({
+            quote: request.quote,
+            source: request.source,
+            description: request.description,
+            category: request.category ? request.category.toLowerCase() : null,
+        })
 
-    const newQuote = {
-        id: lastId + 1,
-        quote: request.quote,
-        source: request.source,
-        description: request.description ?? null,
-        category: request.category ?? null
+        return res.status(201).json({
+            status: 201,
+            message: "Quote successfully added",
+            data: newQuote
+        })
+    } catch (error) {
+        return res.status(400).json({
+            status: 400,
+            endpoint: req.originalUrl,
+            message: "Bad Request",
+            errors: error
+        })
     }
-
-    quotes.push(newQuote)
-    saveQuotes(quotes)
-
-    return res.status(201).json({
-        status: 201,
-        message: 'Quote successfully added',
-        data: newQuote
-    })
 }
 
-module.exports.random = (req, res) => {
-    const quotes = loadQuotes()
-
+module.exports.random = async (req, res) => {
     const category = req.query.category
     
     if (category) {
-        const filteredQuotes = quotes.filter((quote) => quote.category == category)
+        const filteredQuotes = await Quote.aggregate([
+            {
+                $match: {
+                    category: category,
+                } 
+            },
+            {
+                $sample: {
+                    size: 1,
+                }
+            }
+        ])
 
-        if (filteredQuotes.length <= 0) {
+        const quotes = filteredQuotes
+
+        if (quotes.length <= 0) {
             return res.status(404).json({
                 status: 404,
                 endpoint: req.originalUrl,
                 method: req.method,
-                data: 'Not found',
+                message: "Not found",
             })
         }
 
@@ -134,61 +127,75 @@ module.exports.random = (req, res) => {
             status: 200,
             endpoint: req.originalUrl,
             method: req.method,
-            data: filteredQuotes[getRandom(filteredQuotes.length)],
+            data: quotes[0],
         })
     }
+
+    const quotes = await Quote.aggregate([
+        {
+            $sample: {
+                size: 1,
+            }
+        }
+    ])
 
     res.status(200).json({
         status: 200,
         endpoint: req.originalUrl,
         method: req.method,
-        data: quotes[getRandom(quotes.length)]
+        data: quotes[0]
     })
 }
 
-module.exports.show = (req, res) => {
-    const quotes = loadQuotes()
-    const quote = quotes.find((quote) => quote.id == req.params.id)
-    if (!quote) {
-        return res.status(404).json({
-            status: 404,
-            endpoint: req.originalUrl,
-            method: req.method,
-            data: 'Not found'
-        })
-    }
-
-    res.status(200).json({
-        status: 200,
-        endpoint: req.originalUrl,
-        method: req.method,
-        data: quote
-    })
-}
-
-module.exports.destroy = (req, res) => {
-    const quotes = loadQuotes()
-    if (quotes) {
-        const quote = quotes.find((quote) => quote.id == req.params.id)
+module.exports.show = async (req, res) => {
+    try {
+        const quote = await Quote.findById(req.params.id)
         if (!quote) {
             return res.status(404).json({
                 status: 404,
                 endpoint: req.originalUrl,
                 method: req.method,
-                data: 'Not found'
+                message: "Not found"
             })
         }
-        const filteredQuotes = quotes.filter((item) => item.id !== quote.id)
-        saveQuotes(filteredQuotes)
-        
         return res.status(200).json({
             status: 200,
-            message: 'Quote successfully removed'
+            endpoint: req.originalUrl,
+            method: req.method,
+            data: quote
+        })
+    } catch (error) {
+        return res.status(400).json({
+            status: 400,
+            endpoint: req.originalUrl,
+            method: req.method,
+            message: "Bad Request",
+            errors: error
+        })
+    }
+
+}
+
+module.exports.destroy = async (req, res) => {
+    try {
+        const quote = await Quote.deleteOne({_id : req.params.id})
+        return res.status(200).json({
+            status: 200,
+            message: "Quote successfully removed",
+            data: quote
+        })
+    } catch (error) {
+        return res.status(400).json({
+            status: 400,
+            endpoint: req.originalUrl,
+            method: req.method,
+            message: "Bad Request",
+            errors: error
         })
     }
 }
 
-module.exports.update = (req, res) => {
+module.exports.update = async (req, res) => {
     const errors = validationResult(req)
     if (!errors.isEmpty()) {
         return res.status(400).json({
@@ -199,47 +206,38 @@ module.exports.update = (req, res) => {
         })
     }
 
-    const quotes = loadQuotes()
-    const quote = quotes.find((quote) => quote.id == req.params.id)
-    if (!quote) {
-        return res.status(404).json({
-            status: 404,
+    const request = req.body
+    try {
+        const updatedQuote = await Quote.updateOne(
+            {_id: req.params.id},
+            {
+                $set: {
+                    quote: request.quote,
+                    source: request.source,
+                    description: request.description,
+                    category: request.category ? request.category.toLowerCase() : null,
+                }
+            }
+        )
+
+        return res.status(200).json({
+            status: 200,
+            message: "Quote successfully updated",
+            data: updatedQuote
+        })
+    } catch (error) {
+        return res.status(400).json({
+            status: 400,
             endpoint: req.originalUrl,
             method: req.method,
-            data: 'Not found'
+            message: "Bad Request",
+            errors: error
         })
     }
-
-    let request = req.body
-    newQuote = {
-        id: quote.id,
-        quote: request.quote ?? quote.quote,
-        source: request.source ?? quote.source,
-        description: request.description ?? null,
-        category: request.category ?? null
-    }
-
-    const filteredQuotes = quotes.filter((quote) => quote.id != newQuote.id )
-    filteredQuotes.push(newQuote)
-    saveQuotes(filteredQuotes)
-
-    return res.status(200).json({
-        status: 200,
-        message: 'Quote successfully updated',
-        data: newQuote
-    })
 }
 
-module.exports.categories = (req, res) => {
-    const quotes = loadQuotes()
-    const categories = []
-
-    quotes.forEach(quote => {
-        const category = quote.category
-        if (category && !categories.includes(category)) {
-            categories.push(category)
-        }
-    })
+module.exports.categories = async (req, res) => {
+    const categories = await Quote.distinct('category')
 
     res.status(200).json({
         status: 200,

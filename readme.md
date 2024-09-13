@@ -2,30 +2,28 @@
 
 # Indonesian Quotes API
 
-<!-- [![MIT License](https://img.shields.io/github/license/luckyabdillah/indonesian-quotes-api)](https://github.com/tterb/atomic-design-ui/blob/master/LICENSEs)
-[![MIT License](https://img.shields.io/badge/author-luckyabdillah-purple)](https://github.com/luckyabdillah/) -->
-
 </div>
 
 Hola!👋 Indonesian Quotes API is a text api that you can use for free! I took a lot of Indonesian quotes from the internet and put them together in this API so that anyone can access them easily. If you'd like to contribute to this small project, that would be great!
 
 ## Tech stacks
 
-- Node.js & Express
+- Node.js
+- Express
 - TailwindCSS
 
 # Endpoint 🔗
 
 **BASE URL: [https://indonesian-quotes-api.vercel.app](https://indonesian-quotes-api.vercel.app)**
 
-| Endpoint             | Description                                                                            | Parameter  | Method |
-| -------------------- | -------------------------------------------------------------------------------------- | ---------- | ------ |
-| `/`                  | **Indonesian Quotes API** webpage                                                      | NO         | GET    |
-| `/api/quotes`        | Get all quotes                                                                         | `category` | GET    |
-| `/api/categories`    | Displays all possible categories                                                       | NO         | GET    |
-| `/api/quotes/random` | Get random quotes for every call.                                                      | `category` | GET    |
-| `/api/quotes/{id}`   | Get consistent quote for every call with the same ID                                   | NO         | GET    |
-| `/api/quotes/`       | Submit own quote (see the docs [here](https://indonesian-quotes-api.vercel.app/about)) | NO         | POST   |
+| Method | Endpoint             | Description                                                                            | Parameter  |
+| ------ | -------------------- | -------------------------------------------------------------------------------------- | ---------- |
+| GET    | `/`                  | **Indonesian Quotes API** webpage                                                      | NO         |
+| GET    | `/api/quotes`        | Get all quotes                                                                         | `category` |
+| GET    | `/api/categories`    | Displays all possible categories                                                       | NO         |
+| GET    | `/api/quotes/random` | Get random quotes for every call.                                                      | `category` |
+| GET    | `/api/quotes/{id}`   | Get consistent quote for every call with the same ID                                   | NO         |
+| POST   | `/api/quotes/`       | Submit own quote (see the docs [here](https://indonesian-quotes-api.vercel.app/about)) | NO         |
 
 # Example 💻
 
@@ -54,7 +52,7 @@ console.log(quotes);
   "endpoint": "/api/quotes/random",
   "method": "GET",
   "data": {
-    "id": 21,
+    "id": "66e2fa3154974473bbb9eb8d",
     "quote": "Daun yang jatuh tak pernah membenci angin. Dia membiarkan dirinya jatuh begitu saja. Tak melawan, Mengikhlaskan semua.",
     "source": "Tere Liye",
     "description": "Penulis dari Indonesia",
@@ -69,7 +67,7 @@ This project is open-source. Feel free to crunch a bug, add a feature, or fix a 
 
 # Running in Local
 
-1. Cloning this repo:
+1. Clone this repo:
 
 ```bash
 git clone https://github.com/luckyabdillah/indonesian-quotes-api.git
@@ -87,7 +85,9 @@ npm install
 node index.js
 ```
 
-\*make sure you have Node.js installed on your machine
+4. Setup .env
+
+\*make sure you have Node.js and MongoDB installed on your machine
 
 # License
 
