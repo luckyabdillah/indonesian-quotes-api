@@ -11,6 +11,8 @@ if (process.env.APP_ENV != 'local') {
     dbUri = process.env.DB_URI_LOCAL
 }
 
+console.log(process.env);
+
 try {
     mongoose.connect(dbUri, clientOptions);
 } catch (error) {
